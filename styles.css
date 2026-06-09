@@ -1,0 +1,555 @@
+/* Base Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #dadbe5;
+            color: #cb333f;
+            line-height: 1.6;
+        }
+
+        .sans-text {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .wrapper {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* Top Government Status Header */
+        .gov-banner {
+            background-color: #081f4f;
+            color: #fff;
+            font-size: 13px;
+            padding: 10px 0;
+            letter-spacing: 0.5px;
+            font-family: Arial, sans-serif;
+            border-bottom: 2px solid #4a6db8;
+        }
+
+        .gov-banner .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .login-badge {
+            background-color: #081f4f;
+            color: #fff;
+            padding: 4px 18px;
+            border-radius: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Institutional Title Bar */
+        .branding-section {
+            background-color: #4143c3;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 1px solid #0a012b;
+        }
+
+        .branding-section h1 {
+            color: #09043b;
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .branding-section p {
+            font-family: Arial, sans-serif;
+            color: #09043b;
+            font-size: 0.80rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation Menu Row */
+        .navigation-row {
+            background-color: #104ed5;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .navigation-row .wrapper {
+            display: flex;
+            justify-content: space-between;
+            overflow-x: auto;
+        }
+
+        .navigation-row a {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            padding: 18px 15px;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .navigation-row a:hover {
+            background-color: #0b36a3;;
+            color: #e9ebee;
+        }
+
+        /* Split Screen Hero Header */
+        .split-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            background-color: #fff;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        @media (max-width: 768px) {
+            .split-hero {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Two Column Main Body Layout */
+        .workspace {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+            padding: 50px 0;
+        }
+
+        @media (max-width: 950px) {
+            .workspace {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .block-heading {
+            font-size: 1.6rem;
+            color: #800020;
+            margin-bottom: 20px;
+            border-left: 5px solid #d4af37;
+            padding-left: 15px;
+        }
+
+        /* Interactive Crimson Notices Board */
+        .notice-board {
+            background-color: #fff;
+            border: 1px solid #e6e1da;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .notice-row {
+            padding: 15px 0;
+            border-bottom: 1px solid #f3efea;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        .notice-row:last-of-type {
+            border-bottom: none;
+        }
+
+        .notice-row a {
+            color: #081f4f;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .notice-row a:hover {
+            color: #d4af37;
+        }
+
+        .important-note {
+            background-color: #fcf8e3;
+            border: 1px solid #faebcc;
+            color: #8a6d3b;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Core Summary Statement Panel */
+        .history-panel {
+            background-color: #fff;
+            border: 1px solid #e6e1da;
+            padding: 30px;
+        }
+
+        .more-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #800020;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Side Workspace Cards */
+        .sidebar-card {
+            background-color: #fff;
+            border: 1px solid #e6e1da;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .event-node {
+            background-color: #fcfbfa;
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        /* Campus Showcase Section */
+        .campus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .campus-card {
+            background-color: #fff;
+            border: 1px solid #e6e1da;
+            overflow: hidden;
+        }
+
+        .campus-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            background-color: #ddd;
+        }
+
+        .campus-info {
+            padding: 20px;
+        }
+
+        .campus-info h4 {
+            color: #800020;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .campus-info p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Courses Catalog Layout */
+        .courses-block {
+            background-color: #fff;
+            border: 1px solid #e6e1da;
+            padding: 35px;
+            margin-bottom: 40px;
+        }
+
+        .courses-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .course-item {
+            border: 1px solid #eee;
+            padding: 20px;
+            background-color: #fcfbfa;
+        }
+
+        .course-item h4 {
+            color: #800020;
+            margin-bottom: 8px;
+        }
+
+        .course-item p {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .gold-btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #1a1a1a;
+            padding: 10px 25px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 25px;
+        }
+
+        /* Facilities Framework */
+        .facility-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .facility-item {
+            background-color: #fff;
+            border: 1px solid #800020;
+            color: #800020;
+            padding: 8px 20px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Executive Leadership Segment */
+        .leader-block {
+            background-color: #fff;
+            border: 1px solid #e6e1da;
+            padding: 35px;
+            margin-bottom: 50px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 768px) {
+            .leader-block {
+                flex-direction: column;
+            }
+        }
+
+        .leader-img {
+            width: 180px;
+            height: 220px;
+            background-color: #f3efea;
+            background-size: cover;
+            background-position: center;
+            border: 4px solid #e6e1da;
+            flex-shrink: 0;
+            /* Placeholder graphic mimicking an institutional portrait outline */
+            background-image: url('principal.jpg.jpeg');
+        }
+
+        .leader-details h4 {
+            color: #800020;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+
+        .leader-details .caption {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Classical Academic Footer Layout */
+        .main-footer {
+            background-color: #2b2b2b;
+            color: #bfaea3;
+            padding: 60px 0 20px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-top: 4px solid #800020;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid #3d3d3d;
+            padding-bottom: 40px;
+            margin-bottom: 25px;
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            font-size: 15px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #d4af37;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-base {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+        /* --- Hero Section --- */
+        .hero-banner {
+    height: 75vh;
+    background: url('gate.jpg.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #1b0853;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #250109;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--accent-gold);
+    color: #2903a7c4;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--white);
+    color: var(--primary-red);
+    transform: translateY(-2px);
+}
+
+/* Branding Updates */
+.branding-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.college-logo {
+    height: 120px;
+    width: auto;
+}
+
+.branding-text {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .branding-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .branding-text {
+        text-align: center;
+    }
+}
+
+/* Login Page Styles */
+.login-container {
+    max-width: 420px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-top: 6px solid #d4af37;
+}
+
+.login-container h2 {
+    color: #081f4f;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-family: 'Georgia', serif;
+}
+
+.login-form-group {
+    margin-bottom: 20px;
+}
+
+.login-form-group label {
+    display: block;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.login-form-group input:focus {
+    border-color: #081f4f;
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #081f4f;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-btn:hover {
+    background-color: #0b36a3;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.login-footer a {
+    color: #104ed5;
+    text-decoration: underline;
+}
+
+.login-footer a:hover {
+    color: #d4af37;
+}
